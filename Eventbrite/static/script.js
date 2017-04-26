@@ -3,7 +3,7 @@
   var height = api.tool.desktopHeight() - 70;
   var left   = ( wz.tool.environmentWidth() / 2 ) - ( width / 2 );
   var top    = ( wz.tool.environmentHeight() / 2 ) - ( height / 2 );
-  var windowObject = api.popup( 'https://www.eventbrite.es/login/', width, height).render();
+  var windowObject = api.popup( 'https://www.eventbrite.com/login/', width, height).render();
 
     var timer = setInterval( function(){
 

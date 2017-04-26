@@ -3,10 +3,9 @@
   var width;
   var height;
   var minWidth  = 1000;
-  var minHeight = 448;
+  var minHeight = 529;
   var maxWidth = api.tool.desktopWidth();
   var maxHeigth = api.tool.desktopHeight() - 70;
-
 
   if (minHeight > maxHeigth || minWidth > maxWidth) {
     width = maxWidth;
@@ -18,7 +17,7 @@
   }
   var left   = ( wz.tool.environmentWidth() / 2 ) - ( width / 2 );
   var top    = ( wz.tool.environmentHeight() / 2 ) - ( height / 2 );
-  var windowObject = api.popup( 'https://amazon.es/', width, height ).render();
+  var windowObject = api.popup( 'https://amazon.com/', width, height).render();
 
     var timer = setInterval( function(){
 

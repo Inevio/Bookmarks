@@ -3,7 +3,7 @@
   var height = api.tool.desktopHeight() - 70;
   var left   = ( wz.tool.environmentWidth() / 2 ) - ( width / 2 );
   var top    = ( wz.tool.environmentHeight() / 2 ) - ( height / 2 );
-  var windowObject = api.popup( 'http://www.ebay.es', width, height ).render();
+  var windowObject = api.popup( 'http://www.ebay.com', width, height ).render();
 
     var timer = setInterval( function(){
 
