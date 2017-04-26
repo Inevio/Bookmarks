@@ -1,33 +1,43 @@
 
-    var win    = $( this );
-    var width  = 730;
-    var height = 400;
-    var left   = ( api.tool.environmentWidth() / 2 ) - ( width / 2 );
-    var top    = ( api.tool.environmentHeight() / 2 ) - ( height / 2 );
-    var windowObject = api.popup( 'http://www.1001tracklists.com/', width, height ).render();
+var win    = $( this );
 
-    var timer = setInterval( function(){
+var minWidth  = 730;
+var minHeight = 400;
+var maxWidth = api.tool.desktopWidth() - 10;
+var maxHeigth = api.tool.desktopHeight() - 70;
+if (minHeight > maxHeigth || minWidth > maxWidth) {
+  width = maxWidth;
+  height = maxHeigth;
 
-        if( windowObject.closed ){
+}else {
+  width = minWidth;
+  height = minHeight;
+}
 
-            wz.view.remove();
-            clearInterval( timer );
-        }
+var windowObject = api.popup( 'http://www.1001tracklists.com/', width, height ).render();
 
-    }, 500 );
+var timer = setInterval( function(){
 
-    win
-    .on( 'ui-view-focus', function(){
-        windowObject.focus();
-    })
+    if( windowObject.closed ){
 
-    .on( 'ui-view-removed', function(){
-        windowObject.close();
-    });
+        wz.view.remove();
+        clearInterval( timer );
+    }
 
-    // To Do -> A la espera de métodos para conocer cuando se va a cerrar Inevio
-    /*
-    wzWindow.onbeforeunload = function(){
-        windowObject.close();
-    };
-    */
+}, 500 );
+
+win
+.on( 'ui-view-focus', function(){
+    windowObject.focus();
+})
+
+.on( 'ui-view-removed', function(){
+    windowObject.close();
+});
+
+// To Do -> A la espera de métodos para conocer cuando se va a cerrar Inevio
+/*
+wzWindow.onbeforeunload = function(){
+    windowObject.close();
+};
+*/
