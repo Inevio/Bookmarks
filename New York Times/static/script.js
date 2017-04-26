@@ -1,8 +1,16 @@
   var win    = $( this );
-  var width  = api.tool.desktopWidth();
-  var height = api.tool.desktopHeight() - 70;
-  var left   = ( wz.tool.environmentWidth() / 2 ) - ( width / 2 );
-  var top    = ( wz.tool.environmentHeight() / 2 ) - ( height / 2 );
+  var minWidth  = 1200;
+  var minHeight = 750;
+  var maxWidth = api.tool.desktopWidth() - 10;
+  var maxHeigth = api.tool.desktopHeight() - 70;
+  if (minHeight > maxHeigth || minWidth > maxWidth) {
+    width = maxWidth;
+    height = maxHeigth;
+
+  }else {
+    width = minWidth;
+    height = minHeight;
+  }
   var windowObject = api.popup( 'https://www.nytimes.com/', width, height).render();
 
     var timer = setInterval( function(){

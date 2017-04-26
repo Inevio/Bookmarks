@@ -1,9 +1,13 @@
 
   var win    = $( this );
-  var minWidth  = 1500;
-  var minHeight = 700;
-  var maxWidth = api.tool.desktopWidth() - 10;
+  var width;
+  var height;
+  var minWidth  = 1000;
+  var minHeight = 629;
+  var maxWidth = api.tool.desktopWidth();
   var maxHeigth = api.tool.desktopHeight() - 70;
+
+
   if (minHeight > maxHeigth || minWidth > maxWidth) {
     width = maxWidth;
     height = maxHeigth;
@@ -12,8 +16,10 @@
     width = minWidth;
     height = minHeight;
   }
-  var windowObject = api.popup( 'https://pinterest.com/', width, height).render();
-  
+  var left   = ( wz.tool.environmentWidth() / 2 ) - ( width / 2 );
+  var top    = ( wz.tool.environmentHeight() / 2 ) - ( height / 2 );
+  var windowObject = api.popup( 'http://marca.com/', width, height).render();
+
     var timer = setInterval( function(){
 
         if( windowObject.closed ){
