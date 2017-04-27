@@ -3,7 +3,7 @@
   var width;
   var height;
   var minWidth  = 1100;
-  var minHeight = 529;
+  var minHeight = 770;
   var maxWidth = api.tool.desktopWidth();
   var maxHeigth = api.tool.desktopHeight() - 70;
 
