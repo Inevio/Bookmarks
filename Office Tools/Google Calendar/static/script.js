@@ -1,34 +1,43 @@
+var win    = $( this );
 
-  var win    = $( this );
-  var width  = api.tool.desktopWidth();
-  var height = api.tool.desktopHeight() - 70;
-  var left   = ( wz.tool.environmentWidth() / 2 ) - ( width / 2 );
-  var top    = ( wz.tool.environmentHeight() / 2 ) - ( height / 2 );
-  var windowObject = api.popup( 'https://calendar.google.com/calendar/', width, height).render();
+var minWidth  = 1000;
+var minHeight = 630;
+var maxWidth = api.tool.desktopWidth() - 10;
+var maxHeigth = api.tool.desktopHeight() - 70;
+if (minHeight > maxHeigth || minWidth > maxWidth) {
+  width = maxWidth;
+  height = maxHeigth;
 
-    var timer = setInterval( function(){
+}else {
+  width = minWidth;
+  height = minHeight;
+}
 
-        if( windowObject.closed ){
+var windowObject = api.popup( 'https://calendar.google.com/calendar/', width, height).render();
 
-            wz.view.remove();
-            clearInterval( timer );
+  var timer = setInterval( function(){
 
-        }
+      if( windowObject.closed ){
 
-    }, 500 );
+          wz.view.remove();
+          clearInterval( timer );
 
-    win
-    .on( 'ui-view-focus', function(){
-        windowObject.focus();
-    })
+      }
 
-    .on( 'ui-view-removed', function(){
-        windowObject.close();
-    });
+  }, 500 );
 
-    // To Do -> A la espera de métodos para conocer cuando se va a cerrar Inevio
-    /*
-    wzWindow.onbeforeunload = function(){
-        windowObject.close();
-    };
-    */
+  win
+  .on( 'ui-view-focus', function(){
+      windowObject.focus();
+  })
+
+  .on( 'ui-view-removed', function(){
+      windowObject.close();
+  });
+
+  // To Do -> A la espera de métodos para conocer cuando se va a cerrar Inevio
+  /*
+  wzWindow.onbeforeunload = function(){
+      windowObject.close();
+  };
+  */
