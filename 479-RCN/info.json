@@ -1,0 +1,39 @@
+{
+
+    "name"    : "RCN",
+    "version" : "1.0",
+    "stage"   : "beta",
+    "api"     : "a100d2",
+
+    "language" : {
+
+        "default" : "en-en",
+        "list"    : [ "en-en" ]
+
+    },
+
+    "browser" : {
+
+        "url"       : "http://www.canalrcn.com/",
+        "maxizable" : true,
+        "resizable" : true,
+
+        "width"  : {
+
+            "default" : 1333,
+            "min"     : 0,
+            "max"     : 0
+
+        },
+
+        "height" : {
+
+            "default" : 830,
+            "min"     : 0,
+            "max"     : 0
+
+        }
+
+    }
+
+}

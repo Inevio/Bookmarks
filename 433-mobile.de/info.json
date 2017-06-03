@@ -1,0 +1,39 @@
+{
+
+    "name"    : "mobile.de",
+    "version" : "1.0",
+    "stage"   : "beta",
+    "api"     : "a100d2",
+
+    "language" : {
+
+        "default" : "en-en",
+        "list"    : [ "en-en" ]
+
+    },
+
+    "browser" : {
+
+        "url"       : "http://www.mobile.de/",
+        "maxizable" : true,
+        "resizable" : true,
+
+        "width"  : {
+
+            "default" : 1000,
+            "min"     : 0,
+            "max"     : 0
+
+        },
+
+        "height" : {
+
+            "default" : 650,
+            "min"     : 0,
+            "max"     : 0
+
+        }
+
+    }
+
+}

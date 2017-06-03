@@ -1,0 +1,39 @@
+{
+
+    "name"    : "1001 Tracklist",
+    "version" : "1.0",
+    "stage"   : "beta",
+    "api"     : "a100d2",
+
+    "language" : {
+
+        "default" : "en-en",
+        "list"    : [ "en-en" ]
+
+    },
+
+    "browser" : {
+
+        "url"       : "http://www.1001tracklists.com/",
+        "maxizable" : true,
+        "resizable" : true,
+
+        "width"  : {
+
+            "default" : 730,
+            "min"     : 0,
+            "max"     : 0
+
+        },
+
+        "height" : {
+
+            "default" : 400,
+            "min"     : 0,
+            "max"     : 0
+
+        }
+
+    }
+
+}

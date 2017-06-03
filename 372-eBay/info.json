@@ -1,0 +1,39 @@
+{
+
+    "name"    : "eBay",
+    "version" : "1.0",
+    "stage"   : "beta",
+    "api"     : "a100d2",
+
+    "language" : {
+
+        "default" : "en-en",
+        "list"    : [ "en-en" ]
+
+    },
+
+    "browser" : {
+
+        "url"       : "http://www.ebay.com",
+        "maxizable" : true,
+        "resizable" : true,
+
+        "width"  : {
+
+            "default" : 1125,
+            "min"     : 0,
+            "max"     : 0
+
+        },
+
+        "height" : {
+
+            "default" : 595,
+            "min"     : 0,
+            "max"     : 0
+
+        }
+
+    }
+
+}
