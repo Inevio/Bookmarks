@@ -14,7 +14,7 @@
 
     "browser" : {
 
-        "url"       : "https://login.live.com/",
+        "url"       : "https://outlook.live.com/mail/",
         "maxizable" : true,
         "resizable" : true,
 
