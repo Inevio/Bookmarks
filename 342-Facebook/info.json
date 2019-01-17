@@ -14,7 +14,7 @@
 
     "browser" : {
 
-        "url"       : "https://facebook.com/",
+        "template"       : "https://facebook.com/",
         "maxizable" : true,
         "resizable" : true,
 
@@ -32,7 +32,9 @@
             "min"     : 0,
             "max"     : 0
 
-        }
+        },
+
+        "script" : ["script.js"]
 
     }
 
