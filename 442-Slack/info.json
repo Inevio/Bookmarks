@@ -14,7 +14,7 @@
 
     "browser" : {
 
-        "url"       : "https://slack.com/",
+        "url"       : "https://my.slack.com/",
         "maxizable" : true,
         "resizable" : true,
 
