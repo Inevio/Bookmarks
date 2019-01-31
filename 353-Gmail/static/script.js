@@ -1,10 +1,14 @@
-let regex = /^.+\((\d+)\)/
+//let regex = /^.+\((\d+)\)/
 
+//let window = $(this).parents().slice( -1 )[ 0 ].parentNode.defaultView
 setTimeout(function(){
 
   let webviewDom = $('.browser-content .webview-0')
+  setInterval(function(){
+    webviewDom[0].getWebContents().send('getNotifications', '.aim .bsU')
+  }, 2500)
 
-  webviewDom.on('page-title-updated', function(event){
+  /*webviewDom.on('page-title-updated', function(event){
     event = event.originalEvent
     let title = event.title
     let myRegex = new RegExp(regex)
@@ -15,6 +19,6 @@ setTimeout(function(){
     }else{
       api.app.setBadge(0)
     }
-  })
+  })*/
 
 },500)
