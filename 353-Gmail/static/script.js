@@ -5,7 +5,7 @@ setTimeout(function(){
 
   let webviewDom = $('.browser-content .webview-0')
   setInterval(function(){
-    webviewDom[0].getWebContents().send('getNotifications', '.aim .bsU')
+    webviewDom[0].getWebContents().send('getNotifications', JSON.stringify(['.aim','.bsU']))
   }, 2500)
 
   /*webviewDom.on('page-title-updated', function(event){
@@ -21,4 +21,4 @@ setTimeout(function(){
     }
   })*/
 
-},500)
+},1000)
