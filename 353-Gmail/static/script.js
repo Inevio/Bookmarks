@@ -4,7 +4,10 @@
 setTimeout(function(){
 
   let webviewDom = $('.browser-content .webview-0')
-  setInterval(function(){
+  let interval = setInterval(function(){
+    if(!webviewDom[0].getWebContents()){
+      clearInterval(interval)
+    }
     webviewDom[0].getWebContents().send('getNotifications', JSON.stringify(['.aim','.bsU']))
   }, 2500)
 
