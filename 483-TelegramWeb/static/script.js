@@ -1,6 +1,6 @@
-let regex = /^(\d+)\s.*/
+//let regex = /^(\d+)\s.*/
 
-setTimeout(function(){
+/*setTimeout(function(){
 
   let webviewDom = $('.browser-content .webview-0')
   let lastCount = 0
@@ -32,5 +32,18 @@ setTimeout(function(){
       },6000)
     }
   })
+
+},500)*/
+
+setTimeout(function(){
+
+  let webviewDom = $('.browser-content .webview-0')
+  let interval = setInterval(function(){
+    console.log('mando notificaciones', !webviewDom[0].getWebContents())
+    if(!webviewDom[0].getWebContents()){
+      clearInterval(interval)
+    }
+    webviewDom[0].getWebContents().send('getTelegramBadge',  null)
+  }, 2500)
 
 },500)
