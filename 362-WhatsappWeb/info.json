@@ -1,39 +1,55 @@
 {
 
-    "name"    : "Whatsapp Web",
-    "version" : "1.0",
-    "stage"   : "beta",
-    "api"     : "a100d2",
+  "name"    : "Whatsapp Web",
+  "version" : "1.0",
+  "stage"   : "beta",
+  "api"     : "a100d2",
 
-    "language" : {
+  "language" : {
+    "default" : "en-en",
+    "list"    : [ "en-en" ]
+  },
 
-        "default" : "en-en",
-        "list"    : [ "en-en" ]
+  "device" : {
 
-    },
+    "desktop" : {
 
-    "browser" : {
+      "primary" : "main",
+      "unique"  : true,
+      "service" : [],
+      "common"  : {
+        "css"    : [],
+        "script" : [],
+        "start"  : []
+      },
 
-        "url"       : "https://web.whatsapp.com/",
-        "maxizable" : true,
-        "resizable" : true,
+      "view" : {
+          
+        "main" : {
 
-        "width"  : {
+          "url" : "https://web.whatsapp.com/",
+          "maxizable" : true,
+          "resizable" : true,
 
+          "width"  : {
             "default" : 1000,
             "min"     : 0,
             "max"     : 0
+          },
 
-        },
-
-        "height" : {
-
+          "height" : {
             "default" : 530,
             "min"     : 0,
             "max"     : 0
+          },
+
+          "css"    : [],
+          "script" : ["script.js"],
+          "start"  : []
 
         }
-
+      }
     }
+  }
 
 }
