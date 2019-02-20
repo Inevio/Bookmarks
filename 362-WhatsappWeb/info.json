@@ -27,18 +27,18 @@
           
         "main" : {
 
-          "url" : "https://web.whatsapp.com/",
+          "url" : "https://web.whatsapp.com/%F0%9F%8C%90/en",
           "maxizable" : true,
           "resizable" : true,
 
           "width"  : {
-            "default" : 1000,
+            "default" : 910,
             "min"     : 0,
             "max"     : 0
           },
 
           "height" : {
-            "default" : 530,
+            "default" : 600,
             "min"     : 0,
             "max"     : 0
           },
