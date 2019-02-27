@@ -14,7 +14,7 @@
 
     "browser" : {
 
-        "url"       : "https://www.skype.com/",
+        "url"       : "https://web.skype.com",
         "maxizable" : true,
         "resizable" : true,
 
