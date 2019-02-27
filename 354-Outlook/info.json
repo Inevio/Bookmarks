@@ -50,6 +50,10 @@
         }
       }
     }
+  },
+
+  "permission" : {
+    "popup" : true
   }
 
 }
