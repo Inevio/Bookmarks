@@ -32,13 +32,13 @@
           "resizable" : true,
 
           "width"  : {
-            "default" : 1035,
+            "default" : 1150,
             "min"     : 0,
             "max"     : 0
           },
 
           "height" : {
-            "default" : 650,
+            "default" : 700,
             "min"     : 0,
             "max"     : 0
           },
