@@ -1,12 +1,14 @@
 //let regex = /^.+\((\d+)\)/
 
 //let window = $(this).parents().slice( -1 )[ 0 ].parentNode.defaultView
-setTimeout(function(){
+let webviewInterval = setInterval(function(){
 
   let webviewDom = $('.browser-content .webview-0')
   let interval = setInterval(function(){
     if(!webviewDom[0].getWebContents()){
-      clearInterval(interval)
+      return clearInterval(interval)
+    }else{
+      clearInterval(webviewInterval)
     }
     webviewDom[0].getWebContents().send('getNotifications', JSON.stringify(['.aim','.bsU']))
   }, 2500)

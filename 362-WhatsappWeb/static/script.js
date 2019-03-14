@@ -1,9 +1,15 @@
 let regex = /^\((\d+)\)\s.*/
 
-setTimeout(function(){
+let webviewInterval = setInterval(function(){
 
   let webviewDom = $('.browser-content .webview-0')
   let lastCount = 0
+
+  if(!webviewDom[0].getWebContents()){
+    return
+  }else{
+    clearInterval(webviewInterval)
+  }
 
   webviewDom.on('page-title-updated', function(event){
     event = event.originalEvent
