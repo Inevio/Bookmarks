@@ -1,19 +1,18 @@
-//let regex = /^.+\((\d+)\)/
+// let regex = /^.+\((\d+)\)/
 
-//let window = $(this).parents().slice( -1 )[ 0 ].parentNode.defaultView
-let webviewInterval = setInterval(function(){
-
+// let window = $(this).parents().slice( -1 )[ 0 ].parentNode.defaultView
+let webviewInterval = setInterval(function () {
   let webviewDom = $('.browser-content .webview-0')
-  let interval = setInterval(function(){
-    if(!webviewDom[0].getWebContents()){
+  let interval = setInterval(function () {
+    if (!webviewDom[0] || !webviewDom[0].getWebContents()) {
       return clearInterval(interval)
-    }else{
+    } else {
       clearInterval(webviewInterval)
     }
-    webviewDom[0].getWebContents().send('getNotifications', JSON.stringify(['.aim','.bsU']))
+    webviewDom[0].getWebContents().send('getNotifications', JSON.stringify(['.aim', '.bsU']))
   }, 2500)
 
-  /*webviewDom.on('page-title-updated', function(event){
+  /* webviewDom.on('page-title-updated', function(event){
     event = event.originalEvent
     let title = event.title
     let myRegex = new RegExp(regex)
@@ -24,6 +23,5 @@ let webviewInterval = setInterval(function(){
     }else{
       api.app.setBadge(0)
     }
-  })*/
-
-},1000)
+  }) */
+}, 1000)

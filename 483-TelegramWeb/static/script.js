@@ -1,6 +1,6 @@
-//let regex = /^(\d+)\s.*/
+// let regex = /^(\d+)\s.*/
 
-/*setTimeout(function(){
+/* setTimeout(function(){
 
   let webviewDom = $('.browser-content .webview-0')
   let lastCount = 0
@@ -33,19 +33,17 @@
     }
   })
 
-},500)*/
+},500) */
 
-let webviewInterval = setInterval(function(){
-
+let webviewInterval = setInterval(function () {
   let webviewDom = $('.browser-content .webview-0')
-  let interval = setInterval(function(){
-    console.log('mando notificaciones', !webviewDom[0].getWebContents())
-    if(!webviewDom[0].getWebContents()){
+  let interval = setInterval(function () {
+    // console.log('mando notificaciones', !webviewDom[0].getWebContents())
+    if (!webviewDom[0] || !webviewDom[0].getWebContents()) {
       return clearInterval(interval)
-    }else{
+    } else {
       clearInterval(webviewInterval)
     }
-    webviewDom[0].getWebContents().send('getTelegramBadge',  null)
+    webviewDom[0].getWebContents().send('getTelegramBadge', null)
   }, 2500)
-
-},500)
+}, 500)
